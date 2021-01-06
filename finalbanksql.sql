@@ -41,6 +41,10 @@ password varchar(15) not null unique,
 transaction_password varchar(15) not null unique)
 
 
+
+alter table tblNetBanking add primary key(account_number) 
+
+
 create table tblTransactions(
 transaction_id int identity(100,1) primary key,
 customer_id int references tblBankingCustomers(customer_id),
@@ -83,3 +87,11 @@ drop table tblLocked
 create table tbladmin(
 admin_id varchar(20) primary key,
 password varchar(15) not null unique)
+
+
+insert into tblCustomers(First_name,Last_name,Father_name,mobile_number,email_id,account_type,aadhar_number,
+ date_of_birth,age ,gender ,Residential_address,permanent_address,occupation_Type,source_of_income,
+ gross_income ,account_OpenDate ,approved_by ,approved_date) values('divya','kalwal','narsing','8639800091','divya@gmail.com',
+ 'savings','')
+
+ sp_help tblNetbanking
