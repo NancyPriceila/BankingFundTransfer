@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\Divya\source\repos\Project Gladiator\Team10_Banking_2WebApiSolution\Team10_Banking_2WebApiPrioject\Models\BankModel.edmx'. 
+﻿// T4 code generation is enabled for model 'D:\LTI-Training\Project Gladiator\Cloned Repo\FinalProjectBanking-Team-10-\Team10_Banking_2WebApiSolution\Team10_Banking_2WebApiPrioject\Models\BankModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.
