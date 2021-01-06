@@ -25,6 +25,14 @@ approved_status varchar(10),
 approved_by varchar(20),
 approved_date Date)
 
+alter table tblCustomers
+drop column middle_name
+
+alter table tblCustomers
+add  middle_name varchar(30)
+
+select * from tblCustomers
+
 
 
 --------------------------------------------------------
