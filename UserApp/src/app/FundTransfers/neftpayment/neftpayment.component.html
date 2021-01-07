@@ -1,0 +1,78 @@
+<section>
+  
+<div class="container" class="custom-centered">
+  <div class="container p-3 my-3 bg-primary text-white"><h5>Initiate NEFT Payment</h5></div><br>
+    
+
+        <form [formGroup]="neftPaymentForm" (ngSubmit)="initiatePayment()" class="form-group">
+           <table class="container-fluid">
+             <tr>
+               <td><label>From Account</label></td>
+               <td>  <input class="form-control transparent-input" type="text" formControlName="fromAccount"/>
+                <div *ngIf="submitted && f.fromAccount.errors">
+                    <div *ngIf="f.fromAccount.errors.required" class="alert alert-danger"><mat-icon>error_outline</mat-icon><span style="vertical-align: top;">From Account field is required</span></div>
+                </div></td>
+             </tr>
+             <tr>
+               <td><label>To Account</label></td>
+               <td>  <input class="form-control transparent-input" type="text" formControlName="toAccount"/>
+                <div *ngIf="submitted && f.toAccount.errors">
+                    <div *ngIf="f.toAccount.errors.required" class="alert alert-danger"><mat-icon>error_outline</mat-icon><span style="vertical-align: top;">To Account field is required</span></div>
+                </div></td>
+             </tr>
+             <tr>
+               <td> <label>Amount</label></td>
+               <td>
+                <input class="form-control transparent-input" type="number" formControlName="amount"/>
+                <div *ngIf="submitted && f.amount.errors">
+                    <div *ngIf="f.amount.errors.required" class="alert alert-danger"><mat-icon>error_outline</mat-icon><span style="vertical-align: top;">Please Enter the Amount</span></div>
+                </div>
+               </td>
+             </tr>
+             <tr>
+                <td> <label>Transaction Date</label></td>
+                <td>
+                 <input class="form-control transparent-input" type="date" formControlName="transDate"/>
+                 <div *ngIf="submitted && f.transDate.errors">
+                     <div *ngIf="f.transDate.errors.required" class="alert alert-danger"><mat-icon>error_outline</mat-icon><span style="vertical-align: top;">Please Select The Transaction Date</span></div>
+                 </div>
+                </td>
+              </tr>
+             <tr>
+                <td><label>Remark</label></td>
+                <td>  <input class="form-control transparent-input" type="text" formControlName="remark"/>
+                 <div *ngIf="submitted && f.remark.errors">
+                     <div *ngIf="f.remark.errors.required" class="alert alert-danger"><mat-icon>error_outline</mat-icon><span style="vertical-align: top;">Remark field is required</span></div>
+                 </div></td>
+              </tr>
+              <tr>
+                  <td colspan="2">
+                    <p>
+                        <i>
+                            Please note:<br>
+                            <ol>
+                                <li>Transaction will be executed on the next working day 
+                                    if they are scheduled for Sundays,National holidays,NEFT holidays</li>
+                                  <li>Timing for NEFT: Monday-Saturday(expect 2nd and 4th Saturday) 6:00 AM - 6:30 PM</li>
+                            </ol>
+                        </i>
+                    </p>
+                  </td>
+              </tr>
+             <tr>
+              <td>
+                <div >
+                    <button class="btn btn-warning" type="reset" (click)="onReset()">Reset</button>
+                </div>
+           </td>
+           <td>
+            <div >
+                <button class="btn btn-primary" [disabled]="submitted && !neftPaymentForm.valid">Continue</button>
+            </div>
+          </td>
+             </tr>
+           </table>
+        </form>
+</div>
+
+</section>

@@ -1,0 +1,27 @@
+.custom-centered{
+    margin:0 auto;
+    width:600px;
+    height: auto;
+   }
+h5{
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+section{
+    background-image: url("/assets/FundTransferBackground.jpg");
+    height: 100%;
+    background-size:cover;
+   }
+   .transparent-input {
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid gray;
+    background-attachment:fixed;
+ }
+ .alert{
+     height: 40px;
+ }
+ .mat-icon {
+    transform: scale(0.85);
+}

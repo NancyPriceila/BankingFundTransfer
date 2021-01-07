@@ -1,0 +1,26 @@
+.btn-secondary{
+    width:500px;
+    height:auto;
+}
+.btn-primary{
+    width:530px;
+    height:auto;
+    margin: 0 auto;
+}
+h5{
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.custom-centered{
+    margin:0 auto;
+    width:500px;
+    height:fit-content;
+   }
+   section{
+    background-image: url("/assets/FundTransferBackground.jpg");
+    background-size: cover;
+    background-attachment:fixed;
+    height: 100%;
+   }
