@@ -9,6 +9,7 @@
              <td>  <input class="form-control transparent-input" type="text" formControlName="benificiaryName"/>
               <div *ngIf="submitted && f.benificiaryName.errors">
                   <div *ngIf="f.benificiaryName.errors.required" class="alert alert-danger"><mat-icon>error_outline</mat-icon><span style="vertical-align: top;"> Benificiary Name field is required</span></div>
+                  <div *ngIf="f.benificiaryName.errors.pattern" class="alert alert-danger"><mat-icon>error_outline</mat-icon><span style="vertical-align: top;"> Please enter a valid Benificiary Name</span></div>
               </div></td>
            </tr>
            <tr>
@@ -17,6 +18,7 @@
               <input class="form-control transparent-input" type="text" formControlName="acntNo"/>
               <div *ngIf="submitted && f.acntNo.errors">
                   <div *ngIf="f.acntNo.errors.required" class="alert alert-danger"><mat-icon>error_outline</mat-icon><span style="vertical-align: top;">Benificiary Account Number field is required</span> </div>
+                  <div *ngIf="f.acntNo.errors.pattern" class="alert alert-danger"><mat-icon>error_outline</mat-icon><span style="vertical-align: top;">Please enter a valid Benificiary Account Number</span> </div>
               </div>
              </td>
            </tr>
@@ -40,6 +42,7 @@
               <td>  <input class="form-control transparent-input" type="text" formControlName="nickName"/>
                <div *ngIf="submitted && f.nickName.errors">
                    <div *ngIf="f.nickName.errors.required" class="alert alert-danger"><mat-icon>error_outline</mat-icon> <span style="vertical-align: top;">Nick Name field is required</span></div>
+                   <div *ngIf="f.nickName.errors.pattern" class="alert alert-danger"><mat-icon>error_outline</mat-icon> <span style="vertical-align: top;">Nick Name can have only alphabets</span></div>
                </div></td>
             </tr>
            <tr>

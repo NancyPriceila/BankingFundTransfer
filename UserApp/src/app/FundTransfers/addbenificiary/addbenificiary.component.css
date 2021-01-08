@@ -1,5 +1,5 @@
 .custom-centered{
-    margin:0 auto;
+    margin:auto;
     width:600px;
     height: auto;
    }
@@ -13,6 +13,7 @@ section{
     background-image: url("/assets/FundTransferBackground.jpg");
     height: 100%;
     background-size:cover;
+    padding:50px 0;
    }
    .transparent-input {
     background-color: rgba(0, 0, 0, 0);

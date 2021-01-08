@@ -12,6 +12,8 @@ import { RtgspaymentComponent } from './FundTransfers/rtgspayment/rtgspayment.co
 import { TransfersuccessfulComponent } from './FundTransfers/transfersuccessful/transfersuccessful.component';
 import { FundtransferComponent } from './FundTransfers/fundtransfer/fundtransfer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ManagebenificiaryComponent } from './FundTransfers/managebenificiary/managebenificiary.component';
+import { ListbenificiariesComponent } from './FundTransfers/listbenificiaries/listbenificiaries.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NeftpaymentComponent,
     RtgspaymentComponent,
     TransfersuccessfulComponent,
-    FundtransferComponent
+    FundtransferComponent,
+    ManagebenificiaryComponent,
+    ListbenificiariesComponent
   ],
   imports: [
     BrowserModule,

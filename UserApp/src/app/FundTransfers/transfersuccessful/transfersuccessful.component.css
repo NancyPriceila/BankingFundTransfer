@@ -8,11 +8,18 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .btn-secondary{
-    height:auto;
+    height:40px;
 }
 section{
     background-image: url("/assets/FundTransferBackground.jpg");
     background-size: cover;
     background-attachment:fixed;
     height: 100%;
+    padding:50px 0;
+   }
+   strong{
+       color: darkslategrey;
+   }
+   tr{
+       height:30px;
    }

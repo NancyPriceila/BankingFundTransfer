@@ -15,11 +15,11 @@ export class AddbenificiaryComponent implements OnInit {
   
   ngOnInit(): void {
     this.addBenificiaryForm = this.formBuilder.group({
-      benificiaryName: ['', Validators.required],
-      acntNo: ['', Validators.required],
-      reacntNo: ['', [Validators.required, Validators.email]],
+      benificiaryName: ['', [Validators.required,Validators.pattern("^[A-Za-z]{1,}$")]],
+      acntNo: ['', [Validators.required,Validators.pattern("^[0-9]{8,15}$")]],
+      reacntNo: ['', Validators.required],
       saveBenificiary: [false, Validators.requiredTrue],
-      nickName: ['', Validators.required]
+      nickName: ['', [Validators.required,Validators.pattern("^[a-zA-Z]{1,}$")]]
   });
   }
   get f() { return this.addBenificiaryForm.controls; }

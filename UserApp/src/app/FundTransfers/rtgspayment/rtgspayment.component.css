@@ -13,6 +13,7 @@ section{
     background-size: cover;
     background-attachment:fixed;
     height: 100%;
+    padding:20px 0;
    }
 .transparent-input {
     background-color: rgba(0, 0, 0, 0);

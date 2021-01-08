@@ -24,6 +24,7 @@ account_OpenDate Date,
 approved_status varchar(10),
 approved_by varchar(20) references tbladmin(admin_id),
 approved_date Date)
+select * from tblCustomers
 
 --------------------------------
 create table tblBankingCustomers(
@@ -32,6 +33,9 @@ create table tblBankingCustomers(
  account_number int not null unique,
 account_OpenDate Date
 )
+select * from tblBankingCustomers
+insert into tblBankingCustomers(Reference_id,account_number,account_OpenDate) values(2,25423564,'2020/02/03')
+insert into tblBankingCustomers(Reference_id,account_number,account_OpenDate) values(3,35436332,'2020/02/03')
 
 
 create table tblNetBanking(
@@ -75,6 +79,8 @@ account_number int,
 beneficiary_account_number int,
  nickname varchar(20)
 )
+select * from tblBeneficiaries
+insert into tblBeneficiaries values(1001,25423564,35436332,'abcd')
 
 create table tblLocked(
 user_id int references tblBankingCustomers(customer_id),
@@ -82,7 +88,12 @@ account_number int primary key)
 
 drop table tblLocked
 
+insert into tblCustomers values('roshan','zameer','ali','showkar',9066673666,'roshan@gmail.com','savings','4544454534343434','1999-01-29',23,
+'male','328,vallalar nagar','328,vallalar nagar','teacher','teacher',34000,'2021-01-21','approved','admin1','2021-01-23')
+insert into tblCustomers values('nancy','priceila','b','showkar',9066673666,'nancy@gmail.com','savings','4544454534343434','1999-01-29',23,
+'male','328,vallalar nagar','328,vallalar nagar','teacher','teacher',34000,'2021-01-21','approved','admin1','2021-01-23')
 
+insert into tbladmin values('admin1','roshan')
 
 create table tbladmin(
 admin_id varchar(20) primary key,
