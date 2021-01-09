@@ -18,7 +18,7 @@ const routes: Routes = [
   {path:"impspayment",component:ImpspaymentComponent},
   {path:"neftpayment",component:NeftpaymentComponent},
   {path:"rtgspayment",component:RtgspaymentComponent},
-  {path:"transfersuccessful",component:TransfersuccessfulComponent}
+  {path:"transfersuccessful/:id",component:TransfersuccessfulComponent}
 ];
 
 @NgModule({

@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import {  ReactiveFormsModule,FormsModule} from "@angular/forms";
 import { AppRoutingModule } from './app-routing.module';
 import {MatIconModule} from '@angular/material/icon';
+import {HttpClientModule} from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { AddbenificiaryComponent } from './FundTransfers/addbenificiary/addbenificiary.component';
@@ -14,6 +15,7 @@ import { FundtransferComponent } from './FundTransfers/fundtransfer/fundtransfer
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ManagebenificiaryComponent } from './FundTransfers/managebenificiary/managebenificiary.component';
 import { ListbenificiariesComponent } from './FundTransfers/listbenificiaries/listbenificiaries.component';
+import { TransactionService } from './models/services/transaction.service';
 
 @NgModule({
   declarations: [
@@ -33,9 +35,10 @@ import { ListbenificiariesComponent } from './FundTransfers/listbenificiaries/li
     ReactiveFormsModule,
     FormsModule, 
     BrowserAnimationsModule,
-    MatIconModule
+    MatIconModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [TransactionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
