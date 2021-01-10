@@ -12,7 +12,9 @@ import { Transaction } from 'src/app/models/transaction.module';
 export class NeftpaymentComponent implements OnInit {
   neftPaymentForm:FormGroup=new FormGroup({});
   submitted = false;
+  notAdded = false;
   transaction:Transaction;
+  message:string="";
 
   constructor(private formBuilder:FormBuilder,private router:Router,private transactionService:TransactionService) { 
     this.transaction=new Transaction();
@@ -29,6 +31,7 @@ export class NeftpaymentComponent implements OnInit {
   }
   get f() { return this.neftPaymentForm.controls; }
   initiatePayment(){
+    this.notAdded = false;
     this.submitted = true;
     if(this.neftPaymentForm.invalid){
       return;
@@ -40,8 +43,30 @@ export class NeftpaymentComponent implements OnInit {
       this.transaction.amount = this.neftPaymentForm.value["amount"];
       this.transaction.transaction_date = this.neftPaymentForm.value["transDate"];
       this.transaction.remarks = this.neftPaymentForm.value["remark"];
-      this.transactionService.initiateTransaction(this.transaction).subscribe(t=>console.log(t));
-      this.router.navigateByUrl('/transfersuccessful');
+      this.transactionService.initiateTransaction(this.transaction).subscribe(t=>
+        {
+          console.log(t);
+          this.router.navigateByUrl('/transfersuccessful/'+this.transaction.from_account);
+        },
+      error=>{
+        this.message=error.error.Message;
+        if(this.message=="Your transaction failed due to insufficient balance. Please try again."){
+          console.log(this.message);
+          this.router.navigateByUrl('/transactionfailed/'+this.message+'/'+"NEFT");
+        }
+        else{
+          if(this.message=="Beneficiary Account Number not added"){
+            console.log(this.message);
+            this.notAdded=true;
+          }
+          else{
+            if(this.message=="Something Went Wrong. Unable to process your transaction. Please try again."){
+              console.log(this.message);
+              this.router.navigateByUrl('/transactionfailed/'+this.message+'/'+"NEFT");
+            }
+          }
+        }
+      });
     }
   }
   onReset()

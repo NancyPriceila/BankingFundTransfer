@@ -16,6 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ManagebenificiaryComponent } from './FundTransfers/managebenificiary/managebenificiary.component';
 import { ListbenificiariesComponent } from './FundTransfers/listbenificiaries/listbenificiaries.component';
 import { TransactionService } from './models/services/transaction.service';
+import { TransactionfailedComponent } from './FundTransfers/transactionfailed/transactionfailed.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { TransactionService } from './models/services/transaction.service';
     TransfersuccessfulComponent,
     FundtransferComponent,
     ManagebenificiaryComponent,
-    ListbenificiariesComponent
+    ListbenificiariesComponent,
+    TransactionfailedComponent
   ],
   imports: [
     BrowserModule,

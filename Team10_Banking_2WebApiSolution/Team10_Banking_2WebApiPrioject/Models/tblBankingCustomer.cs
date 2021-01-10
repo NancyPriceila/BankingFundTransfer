@@ -19,6 +19,7 @@ namespace Team10_Banking_2WebApiPrioject.Models
         {
             this.tblBeneficiaries = new HashSet<tblBeneficiary>();
             this.tblNetBankings = new HashSet<tblNetBanking>();
+            this.tblBalances = new HashSet<tblBalance>();
             this.tblTransactions = new HashSet<tblTransaction>();
         }
     
@@ -32,6 +33,8 @@ namespace Team10_Banking_2WebApiPrioject.Models
         public virtual ICollection<tblBeneficiary> tblBeneficiaries { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tblNetBanking> tblNetBankings { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<tblBalance> tblBalances { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tblTransaction> tblTransactions { get; set; }
     }

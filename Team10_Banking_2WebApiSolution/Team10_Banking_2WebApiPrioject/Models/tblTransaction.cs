@@ -11,20 +11,31 @@ namespace Team10_Banking_2WebApiPrioject.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.Runtime.Serialization;
+    [DataContract]
     public partial class tblTransaction
     {
-        public int transaction_id { get; set; }
+        [DataMember]
         public Nullable<int> customer_id { get; set; }
+        [DataMember]
         public string transaction_type { get; set; }
+        [DataMember]
         public Nullable<int> from_account { get; set; }
+        [DataMember]
         public Nullable<int> to_account { get; set; }
+        [DataMember]
         public Nullable<double> from_Account_balance { get; set; }
+        [DataMember]
         public Nullable<double> to_Account_balance { get; set; }
+        [DataMember]
         public Nullable<double> amount { get; set; }
+        [DataMember]
         public Nullable<System.DateTime> transaction_date { get; set; }
+        [DataMember]
         public string remarks { get; set; }
-    
+        [DataMember]
+        public int transaction_id { get; set; }
+
         public virtual tblBankingCustomer tblBankingCustomer { get; set; }
     }
 }

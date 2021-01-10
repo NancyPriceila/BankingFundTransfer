@@ -7,6 +7,7 @@ import { ListbenificiariesComponent } from './FundTransfers/listbenificiaries/li
 import { ManagebenificiaryComponent } from './FundTransfers/managebenificiary/managebenificiary.component';
 import { NeftpaymentComponent } from './FundTransfers/neftpayment/neftpayment.component';
 import { RtgspaymentComponent } from './FundTransfers/rtgspayment/rtgspayment.component';
+import { TransactionfailedComponent } from './FundTransfers/transactionfailed/transactionfailed.component';
 import { TransfersuccessfulComponent } from './FundTransfers/transfersuccessful/transfersuccessful.component';
 
 const routes: Routes = [
@@ -18,7 +19,8 @@ const routes: Routes = [
   {path:"impspayment",component:ImpspaymentComponent},
   {path:"neftpayment",component:NeftpaymentComponent},
   {path:"rtgspayment",component:RtgspaymentComponent},
-  {path:"transfersuccessful/:id",component:TransfersuccessfulComponent}
+  {path:"transfersuccessful/:id",component:TransfersuccessfulComponent},
+  {path:"transactionfailed/:msg/:mode",component:TransactionfailedComponent}
 ];
 
 @NgModule({

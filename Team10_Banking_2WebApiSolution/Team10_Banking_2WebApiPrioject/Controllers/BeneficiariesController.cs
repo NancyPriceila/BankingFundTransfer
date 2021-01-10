@@ -5,9 +5,11 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using Team10_Banking_2WebApiPrioject.Models;
+using System.Web.Http.Cors;
 
 namespace Team10_Banking_2WebApiPrioject.Controllers
 {
+    [EnableCors(origins: "http://localhost:4200", methods: "*", headers: "*")]
     public class BeneficiariesController : ApiController
     {
         dbBankEntities2 entities = new dbBankEntities2();
@@ -15,7 +17,6 @@ namespace Team10_Banking_2WebApiPrioject.Controllers
         public HttpResponseMessage GetBenificiaries()
         {
             List<tblBeneficiary> beneficiaries = new List<tblBeneficiary>();
-            entities.Configuration.ProxyCreationEnabled = false;
             beneficiaries = entities.tblBeneficiaries.ToList();
             if (beneficiaries == null)
             {
@@ -29,7 +30,7 @@ namespace Team10_Banking_2WebApiPrioject.Controllers
         [HttpPost]
         public HttpResponseMessage AddBenificiary(tblBeneficiary beneficiary)
         {
-            tblBeneficiary beneficiary1 = entities.tblBeneficiaries.Where(b => b.account_number == beneficiary.account_number).FirstOrDefault();
+            tblBalance balance = entities.tblBalances.Where(b => b.account_number == beneficiary.account_number).FirstOrDefault();
             if (beneficiary == null)
             {
                 entities.tblBeneficiaries.Add(beneficiary);

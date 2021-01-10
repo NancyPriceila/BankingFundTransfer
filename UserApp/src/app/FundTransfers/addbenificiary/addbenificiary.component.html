@@ -2,18 +2,18 @@
 <div class="custom-centered">
   <div class="container p-3 my-3 bg-primary text-white"><h5>Add New Beneficiary</h5></div><br>
 
-      <form [formGroup]="addBenificiaryForm" (ngSubmit)="saveBenificiary()" class="form-group" >
+      <form [formGroup]="addBeneficiaryForm" (ngSubmit)="saveBeneficiary()" class="form-group" >
          <table class="container-fluid">
            <tr>
              <td><label>Beneficiary Name</label></td>
-             <td>  <input class="form-control transparent-input" type="text" formControlName="benificiaryName"/>
-              <div *ngIf="submitted && f.benificiaryName.errors">
-                  <div *ngIf="f.benificiaryName.errors.required" class="alert alert-danger"><mat-icon>error_outline</mat-icon><span style="vertical-align: top;"> Benificiary Name field is required</span></div>
-                  <div *ngIf="f.benificiaryName.errors.pattern" class="alert alert-danger"><mat-icon>error_outline</mat-icon><span style="vertical-align: top;"> Please enter a valid Benificiary Name</span></div>
+             <td>  <input class="form-control transparent-input" type="text" formControlName="beneficiaryName"/>
+              <div *ngIf="submitted && f.beneficiaryName.errors">
+                  <div *ngIf="f.beneficiaryName.errors.required" class="alert alert-danger"><mat-icon>error_outline</mat-icon><span style="vertical-align: top;"> Benificiary Name field is required</span></div>
+                  <div *ngIf="f.beneficiaryName.errors.pattern" class="alert alert-danger"><mat-icon>error_outline</mat-icon><span style="vertical-align: top;"> Please enter a valid Benificiary Name</span></div>
               </div></td>
            </tr>
            <tr>
-             <td> <label>Benificiary Account Number</label></td>
+             <td> <label>Beneficiary Account Number</label></td>
              <td>
               <input class="form-control transparent-input" type="text" formControlName="acntNo"/>
               <div *ngIf="submitted && f.acntNo.errors">
@@ -33,7 +33,7 @@
             </tr>
            <tr>
              <td class="checkbox">
-              <input type="checkbox" formControlName="saveBenificiary" id="saveBenificiary"/>&nbsp; &nbsp;
+              <input type="checkbox" formControlName="saveBeneficiary" id="saveBeneficiary"/>&nbsp; &nbsp;
               <label>Save Beneficiary</label>
              </td>
            </tr>
@@ -41,14 +41,13 @@
               <td><label>Nick Name</label></td>
               <td>  <input class="form-control transparent-input" type="text" formControlName="nickName"/>
                <div *ngIf="submitted && f.nickName.errors">
-                   <div *ngIf="f.nickName.errors.required" class="alert alert-danger"><mat-icon>error_outline</mat-icon> <span style="vertical-align: top;">Nick Name field is required</span></div>
                    <div *ngIf="f.nickName.errors.pattern" class="alert alert-danger"><mat-icon>error_outline</mat-icon> <span style="vertical-align: top;">Nick Name can have only alphabets</span></div>
                </div></td>
             </tr>
            <tr>
              <td colspan="2">
               <div class="text-center">
-                  <button class="btn btn-primary" [disabled]="submitted && !addBenificiaryForm.valid">Save As Benificiary</button>
+                  <button class="btn btn-primary" [disabled]="submitted && !addBeneficiaryForm.valid">Save As Beneficiary</button>
             </div>
              </td>
            </tr>

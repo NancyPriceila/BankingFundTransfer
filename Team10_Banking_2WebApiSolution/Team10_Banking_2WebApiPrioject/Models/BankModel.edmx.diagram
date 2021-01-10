@@ -10,12 +10,15 @@
         <EntityTypeShape EntityType="dbBankModel.tblBeneficiary" Width="1.5" PointX="7.5" PointY="1.25" IsExpanded="true" />
         <EntityTypeShape EntityType="dbBankModel.tblCustomer" Width="1.5" PointX="3" PointY="2.875" IsExpanded="true" />
         <EntityTypeShape EntityType="dbBankModel.tblNetBanking" Width="1.5" PointX="7.5" PointY="4.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbBankModel.tblTransaction" Width="1.5" PointX="7.5" PointY="6.875" IsExpanded="true" />
         <AssociationConnector Association="dbBankModel.FK__tblCustom__appro__3E52440B" ManuallyRouted="false" />
         <AssociationConnector Association="dbBankModel.FK__tblBankin__Refer__4222D4EF" ManuallyRouted="false" />
         <AssociationConnector Association="dbBankModel.FK__tblBenefi__custo__4D94879B" ManuallyRouted="false" />
         <AssociationConnector Association="dbBankModel.FK__tblNetBan__user___46E78A0C" ManuallyRouted="false" />
-        <AssociationConnector Association="dbBankModel.FK__tblTransa__custo__4AB81AF0" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="dbBankModel.sysdiagram" Width="1.5" PointX="0.75" PointY="9.75" />
+        <EntityTypeShape EntityType="dbBankModel.tblBalance" Width="1.5" PointX="7.875" PointY="11.625" />
+        <AssociationConnector Association="dbBankModel.FK__tblBalanc__custo__70DDC3D8" />
+        <EntityTypeShape EntityType="dbBankModel.tblTransaction" Width="1.5" PointX="7.5" PointY="7.125" />
+        <AssociationConnector Association="dbBankModel.FK__tblTransa__custo__4AB81AF0" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

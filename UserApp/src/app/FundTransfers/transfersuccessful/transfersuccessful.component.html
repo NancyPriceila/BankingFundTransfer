@@ -7,31 +7,31 @@
             
             <tr>
                 <td><strong>Reference ID</strong></td>
-                <td>765678</td>
+                <td>{{transaction.transaction_id}}</td>
             </tr>
             <tr>
                 <td><strong>Mode</strong></td>
-                <td>rtgs</td>
+                <td>{{transaction.transaction_type}}</td>
             </tr>
             <tr>
                 <td><strong>Paid To Account</strong></td>
-                <td>xxxxxxxxx89</td>
+                <td>xxxxxx{{transaction.to_account}}</td>
             </tr>
             <tr>
                 <td><strong>Amount</strong></td>
-                <td>9887</td>
+                <td>{{transaction.amount}}</td>
             </tr>
             <tr>
                 <td><strong>From Account</strong></td>
-                <td>xxxxxxxxxxx78</td>
+                <td>xxxxxx{{transaction.from_account}}</td>
             </tr>
             <tr>
                 <td><strong>On</strong></td>
-                <td>7689</td>
+                <td>{{transaction.transaction_date|date}}</td>
             </tr>
             <tr>
                 <td><strong>Remarks</strong></td>
-                <td>hgfghjcx</td>
+                <td>{{transaction.remarks}}</td>
             </tr>
             <tr></tr>
             <tr>

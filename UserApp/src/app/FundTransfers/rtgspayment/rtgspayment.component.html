@@ -18,7 +18,10 @@
                <td>  <input class="form-control transparent-input" type="text" formControlName="toAccount"/>
                 <div *ngIf="submitted && f.toAccount.errors">
                     <div *ngIf="f.toAccount.errors.required" class="alert alert-danger"><mat-icon>error_outline</mat-icon><span style="vertical-align: top;">To Account field is required</span></div>
-                </div></td>
+                </div>
+                <div *ngIf="submitted && notAdded"class="alert alert-danger"><mat-icon>error_outline</mat-icon><span style="vertical-align: top;">{{message}}</span></div>
+              </td>
+                <td><a [routerLink]="['/addbenificiary']"><button class="btn btn-primary">Add New+</button></a></td>
              </tr>
              <tr>
                <td> <label>Amount</label></td>

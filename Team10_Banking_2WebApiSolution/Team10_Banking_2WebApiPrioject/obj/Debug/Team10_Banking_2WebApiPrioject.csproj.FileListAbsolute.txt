@@ -211,3 +211,6 @@ E:\FinalBankingProject-Team10\FinalProjectBanking-Team-10-\Team10_Banking_2WebAp
 E:\FinalBankingProject-Team10\FinalProjectBanking-Team-10-\Team10_Banking_2WebApiSolution\Team10_Banking_2WebApiPrioject\obj\Debug\Team10_Banking_2WebApiPrioject.csproj.CopyComplete
 E:\FinalBankingProject-Team10\FinalProjectBanking-Team-10-\Team10_Banking_2WebApiSolution\Team10_Banking_2WebApiPrioject\obj\Debug\Team10_Banking_2WebApiPrioject.dll
 E:\FinalBankingProject-Team10\FinalProjectBanking-Team-10-\Team10_Banking_2WebApiSolution\Team10_Banking_2WebApiPrioject\obj\Debug\Team10_Banking_2WebApiPrioject.pdb
+E:\FinalBankingProject-Team10\FinalProjectBanking-Team-10-\Team10_Banking_2WebApiSolution\Team10_Banking_2WebApiPrioject\bin\System.Web.Cors.dll
+E:\FinalBankingProject-Team10\FinalProjectBanking-Team-10-\Team10_Banking_2WebApiSolution\Team10_Banking_2WebApiPrioject\bin\System.Web.Http.Cors.dll
+E:\FinalBankingProject-Team10\FinalProjectBanking-Team-10-\Team10_Banking_2WebApiSolution\Team10_Banking_2WebApiPrioject\bin\System.Web.Http.Cors.xml

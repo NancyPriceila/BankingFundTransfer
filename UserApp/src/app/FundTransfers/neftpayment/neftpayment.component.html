@@ -18,7 +18,10 @@
                <td>  <input class="form-control transparent-input" type="text" formControlName="toAccount"/>
                 <div *ngIf="submitted && f.toAccount.errors">
                     <div *ngIf="f.toAccount.errors.required" class="alert alert-danger"><mat-icon>error_outline</mat-icon><span style="vertical-align: top;">To Account field is required</span></div>
-                </div></td>
+                </div>
+                <div *ngIf="submitted && notAdded"class="alert alert-danger"><mat-icon>error_outline</mat-icon><span style="vertical-align: top;">{{message}}</span></div>
+              </td>
+                <td><a [routerLink]="['/addbenificiary']"><button class="btn btn-primary">Add New+</button></a></td>
              </tr>
              <tr>
                <td> <label>Amount</label></td>
@@ -44,20 +47,6 @@
                  <div *ngIf="submitted && f.remark.errors">
                      <div *ngIf="f.remark.errors.required" class="alert alert-danger"><mat-icon>error_outline</mat-icon><span style="vertical-align: top;">Remark field is required</span></div>
                  </div></td>
-              </tr>
-              <tr>
-                  <td colspan="2">
-                    <p>
-                        <i>
-                            Please note:<br>
-                            <ol>
-                                <li>Transaction will be executed on the next working day 
-                                    if they are scheduled for Sundays,National holidays,NEFT holidays</li>
-                                  <li>Timing for NEFT: Monday-Saturday(expect 2nd and 4th Saturday) 6:00 AM - 6:30 PM</li>
-                            </ol>
-                        </i>
-                    </p>
-                  </td>
               </tr>
              <tr>
               <td>
